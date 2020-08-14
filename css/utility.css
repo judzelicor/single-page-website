@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+}
+
+.button {
+  padding: 16px 24px;
+}
