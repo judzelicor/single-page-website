@@ -10,3 +10,8 @@
 .button {
   padding: 16px 24px;
 }
+
+.menu-active {
+  max-height: 300px;
+  transition: all 800ms cubic-bezier(.17,.67,.62,1.12);
+}

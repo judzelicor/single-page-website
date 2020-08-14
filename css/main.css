@@ -26,12 +26,30 @@ ul {
 .global-header {
   background: #ffffff;
   box-shadow: 0 2px 7px -4px rgba(0, 0, 0, 0.5);
-  padding: 0 100px;
+  padding: 0 32px;
+}
+
+.global-header .row {
+  display: block;
+  position: relative;
+}
+
+.menu-toggler {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  position: absolute;
+  top: 18px;
+  right: 0;
+}
+
+.company-brand {
+  display: inline-block;
 }
 
 .company-brand h1 {
   color: #242331;
-  display: inline-block;
   font-family: "Playfair Display", cursive;
   font-weight: 700;
   line-height: 1;
@@ -39,18 +57,18 @@ ul {
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
+  display: block;
   width: 100%;
+  max-height: 0;
+  overflow: hidden;
 }
 
 .navbar__menu {
-  align-items: center;
-  display: flex;
+  text-align: center;
 }
 
-.navbar__menu:first-child {
-  margin-left: 16px;
+.navbar__menu li {
+  margin: 14px 0;
 }
 
 .navbar__menu-item {
@@ -66,14 +84,13 @@ ul {
     rgba(0, 212, 255, 1) 88%
   );
   background-clip: text;
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   cursor: pointer;
   color: #212529;
+  display: inline-block;
   font-size: 1rem;
   font-weight: 600;
   line-height: normal;
-  margin: 0 0.875em;
-  transition: 0.3s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }
 
 .navbar__menu-item:hover {
@@ -89,7 +106,7 @@ ul {
 }
 
 .hero {
-  padding: 0 100px;
+  padding: 0 50px;
   background-image: url(../images/hero-illustration.svg);
   background-size: contain;
   background-repeat: no-repeat;
@@ -133,18 +150,6 @@ ul {
   margin-top: 16px;
 }
 
-/* .hero-content__image {
-  background-image: url(../images/hero-illustration.svg);
-  background-size: 60%;
-  background-repeat: no-repeat;
-  background-position: calc(50% + 200px) 50%;
-  height: 100%;
-  padding: 50px 0;
-  position: absolute;
-  width: 100%;
-  z-index: -1;
-} */
-
 /* Keyframes */
 @keyframes navbarLinkAnimation {
   0% {
@@ -158,15 +163,30 @@ ul {
   }
 }
 
-@media (max-width: 1140px) {
-  .hero {
-    background-size: 60%;
-    background-position: calc(50% + 150px) 50%;
+/* Media */
+@media(min-width: 768px) {
+  .menu-toggler {
+    display: none;
   }
-}
 
-@media (max-width: 768px) {
-  div.hero-content {
-    display: block;
+  .global-header .row {
+    display: flex;
+  }
+
+  .navbar {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    max-height: 300px;
+    margin-left: 16px;
+    transition: none;
+  }
+
+  .navbar__menu {
+    display: flex;
+  }
+
+  .navbar__menu li:first-child {
+    margin-right: 16px;
   }
 }
