@@ -233,9 +233,39 @@ ul {
 
 .insurance-type {
   background-color: #ffff;
-  padding: 16px;
+  padding: 48px 16px;
   display: inline-block;
   width: 300px;
+  text-align: center;
+}
+
+.insurance-type__icon {
+  padding: 10px;
+  display: inline-block;
+  background-color: #F9F9F9;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  box-sizing: content-box;
+}
+
+.insurance-type__text h3 {
+  margin-top: 32px;
+  font-weight: 500;
+}
+
+.insurance-type__text p {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 250px;
+  margin: 0 auto;
+  margin-top: 32px;
+}
+
+.insurance-type img {
+  width: 55px;
+  height: 55px;
 }
 
 .steps {
@@ -422,7 +452,7 @@ ul {
 
 footer {
   background-color: #fd7a43;
-  padding: 32px;
+  padding: 75px 32px 32px 32px;
 }
 
 .col {
@@ -481,7 +511,7 @@ label {
   font-weight: 300;
   line-height: 1.5;
   font-size: 14px;
-  margin-top: 32px;
+  margin-top: 75px;
 }
 
 .careers {
